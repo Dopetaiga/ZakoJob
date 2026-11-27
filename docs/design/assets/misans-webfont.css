@@ -1,0 +1,8 @@
+/* Preview font entry, pinned to the verified package version.
+ * Actual CSS family: "MiSans VF". Variable weight range: 150–700.
+ * For offline use, host the CSS and its referenced WOFF2 subsets in the app.
+ * Font owner: Xiaomi. Use notice belongs in Settings > About.
+ * https://hyperos.mi.com/font/faq
+ * https://github.com/dsrkafuu/misans
+ */
+@import url("https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSansVF.min.css");

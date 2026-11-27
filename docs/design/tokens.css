@@ -1,0 +1,118 @@
+/* 扎口Job design baseline 1.1 — 2026-11-27.
+ * Light cards + full horizontal timeline. Load MiSans separately;
+ * this file does not fetch fonts. Light is the baseline.
+ * Dark is an explicit, unvalidated candidate.
+ *
+ * 圆角按组件职责分配（轻卡片），不再全局统一：
+ *   岗位卡 12/16 · 按钮/输入 8/10 · 菜单 12 · 居中弹窗 16–20 ·
+ *   手机底部面板顶部两角 20 · 小型业务标签 4 · 时间线圆点保持圆形。
+ */
+:root,
+.zako-theme {
+  color-scheme: light;
+
+  --zj-bg: #F5F5F5;
+  --zj-panel: #FFFFFF;
+  --zj-text: #242424;
+  --zj-muted: #6B6B6B;
+  --zj-line: #E7E7E7;
+  --zj-subtle: #EFEFEF;
+  --zj-soft: #F7F7F7;
+
+  --zj-blue: #2869DA;
+  --zj-blue-mark: #3482FF;
+  --zj-blue-bg: #ECF3FF;
+  --zj-primary-fill: #276FE8;
+  --zj-primary-ink: #FFFFFF;
+  --zj-green: #237852;
+  --zj-amber: #946014;
+  --zj-red: #B35A62;
+  --zj-red-text: #A94C55;
+  --zj-red-bg: #FAEEF0;
+
+  --zj-status-completed: var(--zj-muted);
+  --zj-status-pending: var(--zj-blue);
+  --zj-status-offer: var(--zj-green);
+  --zj-status-rejected: var(--zj-red-text);
+  --zj-status-declined: var(--zj-muted);
+  --zj-deadline: var(--zj-amber);
+  --zj-star: var(--zj-amber);
+
+  --zj-font-family: "MiSans VF", "MiSans", "PingFang SC", "Microsoft YaHei",
+    "Noto Sans CJK SC", system-ui, sans-serif;
+  --zj-font-regular: 400;
+  --zj-font-medium: 500;
+  --zj-font-semibold: 600;
+  --zj-font-emphasis: 650;
+  --zj-body-size: 14px;
+  --zj-company-size: 16px;
+  --zj-title-size-desktop: 25px;
+  --zj-role-size-desktop: 13px;
+  --zj-role-size-mobile: 14px;
+  --zj-time-size-desktop: 15px;
+  --zj-time-size-mobile: 17px;
+  --zj-secondary-size: 12px;
+  --zj-input-size: 16px;
+  --zj-line-height: 1.5;
+  --zj-title-line-height: 1.3;
+
+  /* 轻卡片圆角体系：按职责分配，桌面 / 手机分端取值。 */
+  --zj-radius-card: 12px;
+  --zj-radius-card-mobile: 16px;
+  --zj-radius-control: 8px;
+  --zj-radius-control-mobile: 10px;
+  --zj-radius-menu: 12px;
+  --zj-radius-dialog: 20px;
+  --zj-radius-dialog-small: 16px;
+  --zj-radius-sheet-top: 20px;
+  --zj-radius-badge: 4px;
+  --zj-card-gap: 12px;
+  --zj-card-padding-desktop: 18px 20px;
+  --zj-card-padding-mobile: 15px 14px 8px;
+  --zj-card-min-height-desktop: 114px;
+  --zj-page-padding-desktop: 28px;
+  --zj-page-padding-mobile: 16px;
+  --zj-page-padding-mobile-narrow: 12px;
+  --zj-touch-target: 44px;
+  --zj-icon-size: 17px;
+
+  --zj-shadow-card: none;
+  --zj-shadow-menu: 0 12px 32px #25252516;
+  --zj-shadow-dialog: 0 24px 70px #25252516;
+  --zj-motion-fast: 160ms;
+  --zj-motion-normal: 200ms;
+  --zj-motion-easing: cubic-bezier(.2, .8, .2, 1);
+}
+
+/* Candidate only: validate complete states before enabling a dark theme. */
+:root[data-theme="dark"],
+.zako-theme[data-theme="dark"] {
+  color-scheme: dark;
+  --zj-bg: #181818;
+  --zj-panel: #262626;
+  --zj-text: #F3F3F3;
+  --zj-muted: #AEAEAE;
+  --zj-line: #3B3B3B;
+  --zj-subtle: #333333;
+  --zj-soft: #333333;
+  --zj-blue: #9AC0FF;
+  --zj-blue-mark: #639FFF;
+  --zj-blue-bg: #28374F;
+  --zj-primary-fill: #76A8FA;
+  --zj-primary-ink: #132238;
+  --zj-green: #87D7AE;
+  --zj-amber: #F5CA7A;
+  --zj-red: #EDABB2;
+  --zj-red-text: #EDABB2;
+  --zj-red-bg: #422D33;
+  --zj-shadow-menu: 0 12px 32px #00000066;
+  --zj-shadow-dialog: 0 24px 70px #00000066;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  .zako-theme {
+    --zj-motion-fast: 0ms;
+    --zj-motion-normal: 0ms;
+  }
+}

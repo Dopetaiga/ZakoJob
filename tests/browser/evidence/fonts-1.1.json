@@ -1,0 +1,40 @@
+{
+  "platformFonts.zh": {
+    "families": [
+      "MiSans VF"
+    ],
+    "glyphCount": 17
+  },
+  "platformFonts.latin": {
+    "families": [
+      "MiSans VF"
+    ],
+    "glyphCount": 25
+  },
+  "platformFonts.digits": {
+    "families": [
+      "MiSans VF"
+    ],
+    "glyphCount": 15
+  },
+  "weightWidths": {
+    "400": 251.55,
+    "600": 263.17,
+    "650": 266.11
+  },
+  "inputFontSize": "16px",
+  "inputSizeToken": "16px",
+  "blocked.fonts.check MiSans": false,
+  "blocked.platformFonts.company": {
+    "families": [
+      "Microsoft YaHei"
+    ],
+    "glyphCount": 4
+  },
+  "blocked.cardIds": [
+    "qinghe",
+    "qiyuan",
+    "shiguang",
+    "link-42"
+  ]
+}
